@@ -10,11 +10,20 @@ function writePassword() {
 
 }
 
-function generatePassword(){
+function generatePassword() {
   var passwordlength = parseInt(prompt("Enter Password Length(8-126)?"))
-  if(passwordlength < 8 || passwordlength > 126 || isNaN(passwordlength)){
+  if (passwordlength < 8 || passwordlength > 126 || isNaN(passwordlength)) {
     return "Invalid Length entered Please enter valid Ineteger between 8 to 126"
   }
+  var upperCasecharacters = confirm("Would you like to have uppercase characters in your password?")
+  var lowerCasecharacters = confirm("Would you like to have lowercase characters in your password?")
+  var numbercharacters = confirm("Would you like to have number characters in your password?")
+  var symbolscharacters = confirm("Would you like to have symbols characters in your password?")
+
+  if (!upperCasecharacters && !lowerCasecharacters && !numbercharacters && !symbolscharacters) {
+    return "Choose within suggested options."
+  }
+
 }
 
 // Add event listener to generate button
