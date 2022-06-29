@@ -10,5 +10,12 @@ function writePassword() {
 
 }
 
+function generatePassword(){
+  var passwordlength = parseInt(prompt("Enter Password Length(8-126)?"))
+  if(passwordlength < 8 || passwordlength > 126 || isNaN(passwordlength)){
+    return "Invalid Length entered Please enter valid Ineteger between 8 to 126"
+  }
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
