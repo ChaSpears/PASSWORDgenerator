@@ -44,7 +44,7 @@ function generatePassword() {
     password +=inventoryLetters[index]
   }
   console.log(password)
-
+ return password
 }
 
 // Add event listener to generate button
