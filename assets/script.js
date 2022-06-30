@@ -24,6 +24,27 @@ function generatePassword() {
     return "Choose within suggested options."
   }
 
+  var password = ""
+  var inventoryLetters = []
+  if(upperCasecharacters){
+    inventoryLetters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  }
+  if(lowerCasecharacters){
+    inventoryLetters += "abcdefghijklmnopqrstuvwxyz"
+  }
+  if(numbercharacters){
+    inventoryLetters += "0123456789"
+  }
+  if(symbolscharacters){
+    inventoryLetters += "!@#$%^&*()_+"
+  }
+
+  for(let  i=1;i<=passwordlength;i++){
+    var index = Math.floor(Math.random()*inventoryLetters.length)
+    password +=inventoryLetters[index]
+  }
+  console.log(password)
+
 }
 
 // Add event listener to generate button
